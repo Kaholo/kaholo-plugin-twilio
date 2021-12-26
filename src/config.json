@@ -1,0 +1,56 @@
+{
+  "name": "Twilio",
+  "type": "executer",
+  "execProgram": "node",
+  "main": "app.js",
+  "exposeRoute": true,
+  "imgUrl": "logo.png",
+  "version": "1.0.2",
+  "description": "Integration with Twilio API",
+  "settings": [
+    {
+      "name": "accountSid",
+      "viewName": "Account SID",
+      "type": "string"
+    },
+    {
+      "name": "authToken",
+      "viewName": "Auth Token",
+      "type": "vault"
+    }
+  ],
+  "methods": [
+    {
+      "name": "sendSms",
+      "viewName": "Send SMS",
+      "params": [
+        {
+          "name": "accountSid",
+          "viewName": "Account SID",
+          "type": "string"
+        },
+        {
+          "name": "authToken",
+          "viewName": "Auth Token",
+          "type": "vault"
+        },
+        {
+          "name": "from",
+          "viewName": "From",
+          "type": "string"
+        },
+        {
+          "name": "to",
+          "viewName": "To",
+          "type": "text"
+        },
+        {
+          "name": "body",
+          "viewName": "SMS Body",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "category": "NOTIFICATIONS"
+}
